@@ -6,7 +6,7 @@
 - `index.html` 진입 페이지
 - `style.css` 스타일
 - `app.js` 앱 전체 로직
-- `manifest.webmanifest`, `sw.js`, `icons/` 홈 화면 추가와 오프라인 사용을 위한 PWA 파일
+- `manifest.json`, `sw.js`, `icons/` 홈 화면 추가와 오프라인 사용을 위한 PWA 파일
 
 ## GitHub Pages로 배포
 1. 이 폴더의 파일들을 저장소 루트에 그대로 올립니다.
@@ -21,3 +21,8 @@
 - 단어 데이터는 브라우저 `localStorage`에 저장됩니다. 기기와 브라우저마다 따로 저장되고, 사이트 데이터를 지우면 사라집니다.
 - 코드를 수정해서 다시 배포할 때 반영이 안 되면 `sw.js`의 `flashcard-v1`을 `flashcard-v2`처럼 올려주세요.
 - 듣기 기능은 브라우저 음성 합성(Web Speech API)을 사용합니다.
+
+## PWABuilder로 앱 만들기
+1. 위 방법으로 GitHub Pages에 먼저 배포합니다 (HTTPS 주소 필요).
+2. https://www.pwabuilder.com 에 배포된 주소를 입력하면 `manifest.json`와 서비스 워커(`sw.js`)를 자동으로 인식합니다.
+3. Android 패키지(AAB/APK) 등을 선택해 내려받으면 됩니다.
